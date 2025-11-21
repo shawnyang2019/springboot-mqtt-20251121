@@ -14,7 +14,7 @@ public class MqttFactory {
     @Autowired
     private MqttProperties mqttProp;
 
-    @Bean
+//    @Bean
     public MqttConnectOptions mqttConnectOptions() {
         MqttConnectOptions options = new MqttConnectOptions();
         options.setUserName(mqttProp.getUsername());
