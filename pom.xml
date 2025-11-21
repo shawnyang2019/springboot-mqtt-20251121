@@ -12,7 +12,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <relativePath/>
-        <version>2.1.2.RELEASE</version>
+        <version>3.5.7</version>
     </parent>
 
     <dependencies>
@@ -38,7 +38,12 @@
             <artifactId>spring-integration-mqtt</artifactId>
             <scope>compile</scope>
         </dependency>
-
+        <!-- Eclipse Paho MQTT 客户端（底层依赖） -->
+        <dependency>
+            <groupId>org.eclipse.paho</groupId>
+            <artifactId>org.eclipse.paho.client.mqttv3</artifactId>
+            <version>1.2.5</version>
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>

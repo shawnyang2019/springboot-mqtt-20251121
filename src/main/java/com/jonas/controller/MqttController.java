@@ -4,6 +4,7 @@ import com.jonas.mqtt.gateway.MqttGateway;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,7 +20,7 @@ public class MqttController {
     private final MqttGateway mqttGateway;
 
     @PostMapping("/send")
-    public String sendMsg(String data) {
+    public String sendMsg(@RequestBody String data) {
         mqttGateway.sendToMqtt(data);
         return "success";
     }

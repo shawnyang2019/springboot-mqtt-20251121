@@ -14,7 +14,9 @@ mqtt:
   password: public
   host-url:
     - tcp://localhost:1883
+#  发送消息的客户端的id
   client-id: mqttId2
+# 发送消息时指定的主题
   default-topic: topicA
   connection-timeout: 3000
   subscription-topic:
